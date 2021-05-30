@@ -1,0 +1,19 @@
+From: zsien <i@zsien.cn>
+Date: Fri, 28 May 2021 23:28:01 +0800
+Subject: move gtkgreet to sbin
+
+---
+ gtkgreet/meson.build | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+diff --git a/gtkgreet/meson.build b/gtkgreet/meson.build
+index 984dd48..dde3201 100644
+--- a/gtkgreet/meson.build
++++ b/gtkgreet/meson.build
+@@ -17,4 +17,5 @@ executable(
+ 			'gtkgreet.c'
+ 		],
+ 		dependencies: dependencies,
+-		install: true)
++		install: true,
++		install_dir: get_option('sbindir'))
